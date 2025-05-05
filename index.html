@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bearcub Travel</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand">
+      <img src="./images/bearCub.png" alt="bearcub logo" class="logo" />
+      <div class="company-name">Bearcub Travel</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./contact.html">Contact Us</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <button id="searchButton">Search</button>
+      <button id="resetButton">Clear</button>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <h1>Plan Your Destination</h1>
+    <p>We create personalized travel experiences just for you.</p>
+    <button class="book-now">Book Now</button>
+  </main>
+
+  <script>
+    document.getElementById('searchButton').addEventListener('click', () => {
+      const term = document.getElementById('searchInput').value;
+      alert('Searching for: ' + term);
+    });
+
+    document.getElementById('resetButton').addEventListener('click', () => {
+      document.getElementById('searchInput').value = '';
+      alert('Search results cleared');
+    });
+  </script>
+</body>
+</html>
+
