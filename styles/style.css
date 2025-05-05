@@ -1,3 +1,4 @@
+/* Reset & Basics */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +7,11 @@
   
   body {
     font-family: Arial, sans-serif;
-    background: url('.') center/cover fixed no-repeat;
+    background-image: url('../images/downtown-wichita-ks.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #003366;
-    min-height: 100vh;
   }
   
   /* Navbar */
@@ -16,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background-color: #333;
     color: white;
     padding: 1rem;
     flex-wrap: wrap;
@@ -29,18 +32,19 @@
   
   .logo {
     height: 40px;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
   
-  .company-name {
+  .company-name p {
+    margin: 0;
     font-weight: bold;
+    line-height: 1.2;
   }
   
-  /* Nav links */
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   .nav-links a {
@@ -50,71 +54,127 @@
   }
   
   .nav-links a:hover {
-    color: #ccc;
+    color: #ddd;
   }
   
-  /* Search */
-  .search-box {
+  .search-container {
     display: flex;
     gap: 0.5rem;
     margin-top: 0.5rem;
   }
   
-  .search-box input {
+  .search-container input {
     padding: 0.5rem;
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
     border: none;
+    width: 200px;
   }
   
-  .search-box button {
+  .search-btn,
+  .reset-btn {
     padding: 0.5rem 1rem;
     border: none;
+    cursor: pointer;
+    font-weight: bold;
     color: white;
     border-radius: 4px;
-    cursor: pointer;
   }
   
-  #searchButton {
+  .search-btn {
     background-color: #4CAF50;
   }
   
-  #resetButton {
+  .reset-btn {
     background-color: #f44336;
   }
   
-  button:hover {
-    opacity: 0.9;
+  .search-btn:hover {
+    background-color: #45a049;
   }
   
-  /* Hero section */
+  .reset-btn:hover {
+    background-color: #d73225;
+  }
+  
+  /* Main Hero Section */
   .hero {
-    text-align: center;
-    margin-top: 15vh;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4rem;
+    min-height: 80vh;
   }
   
-  .hero h1 {
-    font-size: 3rem;
+  .text-block {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .stacked-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .stacked-title span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Intro Paragraph and Button */
+  .intro-text p {
+    font-weight: bold;
     margin-bottom: 1rem;
   }
   
   .book-now {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
   }
   
   .book-now:hover {
     background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .hero {
+      justify-content: center;
+      padding: 2rem;
+    }
+  
+    .text-block {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .stacked-title {
+      align-items: center;
+    }
+  
+    .search-container {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .search-container input {
+      width: 100%;
+      border-radius: 4px;
+    }
   }
   

@@ -9,34 +9,45 @@
 <body>
   <nav class="navbar">
     <div class="brand">
-      <img src="./images/bearCub.png" alt="bearcub logo" class="logo" />
-      <div class="company-name">Bearcub Travel</div>
+      <img src="./images/bearCub.png" alt="bearcub" class="logo" />
+      <div class="company-name">
+        <p>Bearcub</p>
+        <p>Travel</p>
+      </div>
     </div>
     <ul class="nav-links">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./about.html">About Us</a></li>
-      <li><a href="./contact.html">Contact Us</a></li>
+      <li><a href="travel_recommendation.html">Home</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
     </ul>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search..." />
-      <button id="searchButton">Search</button>
-      <button id="resetButton">Clear</button>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for recommendations..." />
+      <button class="search-btn" id="searchButton">Search</button>
+      <button class="reset-btn" id="resetButton">Clear</button>
     </div>
   </nav>
 
   <main class="hero">
-    <h1>Plan Your Destination</h1>
-    <p>We create personalized travel experiences just for you.</p>
-    <button class="book-now">Book Now</button>
+    <div class="text-block">
+      <div class="stacked-title">
+        <span>Plan</span>
+        <span>Your</span>
+        <span>Destination</span>
+      </div>
+      <div class="intro-text">
+        <p>We create personalized travel experiences just for you.</p>
+        <button class="book-now">Book Now</button>
+      </div>
+    </div>
   </main>
 
   <script>
-    document.getElementById('searchButton').addEventListener('click', () => {
-      const term = document.getElementById('searchInput').value;
-      alert('Searching for: ' + term);
+    document.getElementById('searchButton').addEventListener('click', function () {
+      const searchTerm = document.getElementById('searchInput').value;
+      alert('Searching for: ' + searchTerm);
     });
 
-    document.getElementById('resetButton').addEventListener('click', () => {
+    document.getElementById('resetButton').addEventListener('click', function () {
       document.getElementById('searchInput').value = '';
       alert('Search results cleared');
     });
