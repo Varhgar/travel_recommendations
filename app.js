@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
           } else if (searchTerm.includes('temple')) {
             recommendations = data.temples.slice(0, 2);  // Get 2 temple recommendations
           } else if (searchTerm.includes('country')) {
-            recommendations = data.country.cities.slice(0, 2);  // Get 2 country recommendations
+            const allCities = data.countries.flatMap(country => country.cities);
+            recommendations = allCities.slice(0, 2);  // Get 2 country recommendations
           }
   
           // Display the recommendations
