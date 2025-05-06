@@ -16,14 +16,16 @@
       </div>
     </div>
     <ul class="nav-links">
-      <li><a href="travel_recommendation.html">Home</a></li>
-      <li><a href="about_us.html">About Us</a></li>
-      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./contact.html">Contact Us</a></li>
     </ul>
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search for recommendations..." />
-      <button class="search-btn" id="searchButton">Search</button>
-      <button class="reset-btn" id="resetButton">Clear</button>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search for recommendations..." />
+        <button class="search-btn" id="searchButton">Search</button>
+        <button class="reset-btn" id="resetButton">Clear</button>
+      </form>
     </div>
   </nav>
 
@@ -39,19 +41,11 @@
         <button class="book-now">Book Now</button>
       </div>
     </div>
+
+    <div id="resultsContainer"></div>
   </main>
 
-  <script>
-    document.getElementById('searchButton').addEventListener('click', function () {
-      const searchTerm = document.getElementById('searchInput').value;
-      alert('Searching for: ' + searchTerm);
-    });
-
-    document.getElementById('resetButton').addEventListener('click', function () {
-      document.getElementById('searchInput').value = '';
-      alert('Search results cleared');
-    });
-  </script>
+  <script src="./app.js"></script>
 </body>
 </html>
 
