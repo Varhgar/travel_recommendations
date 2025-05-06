@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           } else if (searchTerm.includes('temple')) {
             recommendations = data.temples.slice(0, 2);  // Get 2 temple recommendations
           } else if (searchTerm.includes('country')) {
-            recommendations = data.countries.slice(0, 2);  // Get 2 country recommendations
+            recommendations = data.country.cities.slice(0, 2);  // Get 2 country recommendations
           }
   
           // Display the recommendations
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsContainer.innerHTML = '<p>No results found. Try searching for "beach", "temple", or "country".</p>';
       } else {
         resultsContainer.style.display = 'block';
-        
+
         recommendations.forEach(item => {
           const recommendationDiv = document.createElement('div');
           recommendationDiv.classList.add('recommendation-item');
