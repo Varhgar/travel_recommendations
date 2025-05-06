@@ -22,12 +22,12 @@
         "cities": [
           {
             "name": "Tokyo, Japan",
-            "imageUrl": "travel_recommendations/images/tokyo.jpeg",
+            "imageUrl": "./images/tokyo.jpeg",
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
           },
           {
             "name": "Kyoto, Japan",
-            "imageUrl": "travel_recommendations/images/kyoto.jpeg",
+            "imageUrl": "./images/kyoto.jpeg",
             "description": "Known for its historic temples, gardens, and traditional tea houses."
           }
         ]
